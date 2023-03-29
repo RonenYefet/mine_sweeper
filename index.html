@@ -9,8 +9,16 @@
 </head>
 
 <body  onload="onInit()">
-  <h1>Mine Sweeper</h1>  
-<table>
+  <h1>Mine Sweeper</h1>
+
+  <h2 class="lives-left"><span>3</span> Lives Left</h2>
+  <div class="level-btns-container">
+    <button class="level-btn" onclick="onChangeLevel(4,2)">Begginer</button>
+    <button class="level-btn" onclick="onChangeLevel(8,14)">Medium</button>
+    <button class="level-btn" onclick="onChangeLevel(12,32)">Expert</button>
+    <button class="restart-btn" onclick="onInit()">&#128525;</button>
+  </div>
+<table>    
     <tbody class="board"></tbody>
   </table>
 
