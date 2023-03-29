@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="#">
+  <title>Mine Sweeper</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body  onload="onInit()">
+  <h1>Mine Sweeper</h1>  
+<table>
+    <tbody class="board"></tbody>
+  </table>
+
+  <div class="modal hide">
+    <h2 class="user-msg">You Won!</h2>
+    <button class="restart-btn" onclick="onInit()">Restart</button>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
