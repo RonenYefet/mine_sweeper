@@ -8,24 +8,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body  onload="onInit()">
+<body onload="onInit()">
   <h1>Mine Sweeper</h1>
 
-  <h2 class="lives-left"><span>3</span> Lives Left</h2>
-  <div class="level-btns-container">
-    <button class="level-btn" onclick="onChangeLevel(4,2)">Begginer</button>
-    <button class="level-btn" onclick="onChangeLevel(8,14)">Medium</button>
-    <button class="level-btn" onclick="onChangeLevel(12,32)">Expert</button>
-    <button class="restart-btn" onclick="onInit()">&#128525;</button>
+  <div class="lives-left_container">
+    Lives Left : <span class="lives-left">0</span>
   </div>
-<table>    
+  <div class="timer-container">
+    Timer : <span class="timer">0</span>
+  </div>
+
+  <table>
+    <div class="level-btns-container">
+      <button class="level-btn" onclick="onChangeLevel(4,2)">Beginner</button>
+      <button class="level-btn" onclick="onChangeLevel(8,14)">Medium</button>
+      <button class="level-btn" onclick="onChangeLevel(12,32)">Expert</button>
+      <button class="restart-btn" onclick="onInit()">&#128525;</button>
+    </div>
     <tbody class="board"></tbody>
   </table>
 
-  <div class="modal hide">
-    <h2 class="user-msg">You Won!</h2>
-    <button class="restart-btn" onclick="onInit()">Restart</button>
-  </div>
 
   <script src="js/util.js"></script>
   <script src="js/main.js"></script>

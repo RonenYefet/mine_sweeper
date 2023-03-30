@@ -1,20 +1,14 @@
 function renderBoard(mat, selector) {
-
     var strHTML = '<table border="0"><tbody>'
     for (var i = 0; i < mat.length; i++) {
-
         strHTML += '<tr>'
         for (var j = 0; j < mat[0].length; j++) {
-
             const cell = mat[i][j]
             const className = `cell cell-${i}-${j}`
-
             strHTML += `<td class="${className}">${cell}</td>`
         }
-        strHTML += '</tr>'
-    }
+        strHTML += '</tr>'    }
     strHTML += '</tbody></table>'
-
     const elContainer = document.querySelector(selector)
     elContainer.innerHTML = strHTML
 }
@@ -36,7 +30,7 @@ function getEmptyLocation(board) {
     return emptyLocations[randIdx]
 }
 
-
+   
 // Returns the class name for a specific cell
 function getClassName(location) {
     const cellClass = 'cell-' + location.i + '-' + location.j
@@ -64,11 +58,6 @@ function getRandomColor() {
     return color
 }
 
-// function getGhostHTML(ghost) {
-//     const color = gPacman.isSuper ? 'blue' : ghost.color
-//     return `<span style="background-color:${color};">${GHOST}</span>`
-// }
-
 function createMat(ROWS, COLS) {
     const mat = []
     for (var i = 0; i < ROWS; i++) {
@@ -87,5 +76,8 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min //The maximum is inclusive and the minimum is inclusive
 }
 
+function  avoidRightClickedDefault(){
+    document.addEventListener('contextmenu', event => event.preventDefault());
+}
 
 

@@ -1,17 +1,23 @@
 body {
-    background-color: black;
+    background-color: rgb(64, 87, 90);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
+
 table {
+    background-color: azure;
+    border: 1px solid black;
     margin: auto;
+    border-collapse:separate;
+    border-spacing: 2px;
 }
 
 .cell {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    display:table-cell
 }
 
 .cell img {
@@ -19,35 +25,35 @@ table {
     height: auto;
 }
 
-.empty {
+td:empty {
     background-color: gray;
 }
-
-
-.wall {
-    background-color: brown;
+.empty {
+    background: linear-gradient(to top,  black, white);
+}
+.shown {    
+    background: linear-gradient(to top,  red    , white);
 }
 
-/* .level-btn {
+.timer {
+    color: white;
+    font-size: large;
+}
+
+
+ .level-btn {
     background-color: rgb(182, 182, 135);
-    height: 20  px;
-    width: 20px;
-    /* display: grid; */
-    /* place-items:center; */
-    /*left: 50%;
-    //right: 50%;}*/
- */
+    height: 20px;
+    width: 50px;
+    font-size: 8px;
+    text-align: center;    
+ }
+ .restart-btn {
+    background-color: rgb(182, 182, 135);
+    height: 20px;
+    width: 25px;
+    font-size: 8px;
+    text-align: center;    
+ }
 
-.modal {
-    background-color: black;
-    border: 5px solid white;
-    width: 300px;
-    padding: 20px;
-    position: absolute;
-    top: 300px;
-    left: calc(50% - 175px);
-}
-
-.hide {
-    display: none;
-}
+ 
